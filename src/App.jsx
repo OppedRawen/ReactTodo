@@ -1,16 +1,20 @@
 import "./style.css"
+import { useState } from "react"
 // class in html = className
 // components only allow 1 css tag wrapped around everything
 // in this case we can wrap everything around fragments(<> </>)
 // empty tag
 
 // states to make stuff responsive
+// useState is a hook from react
 export default function App(){
+ const[newItem,setNewItem]= useState("sdsdsd");
+
   return <><form className="new-item-form">
    
     <div className="form -row">
       <label htmlFor="item">New Item</label>
-      <input type="text" id="item"></input>
+      <input value ={newItem} onChange={e=>setNewItem(e.target.value)} type="text" id="item"></input>
     </div>
     <button className="btn">Add</button>
   </form>
