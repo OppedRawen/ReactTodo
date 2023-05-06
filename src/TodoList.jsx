@@ -7,7 +7,7 @@ export function TodoList({todos, toggleTodo,deleteTodo}){
           {/* this is called short circuiting, which means if the first statement is true, it would render the second statement */}
           {todos.length===0&&"No Todos"}
           {todos.map(todo=>{
-            return  (<TodoItem id={todo.id}completed={todo.com} title={todo.title} key={todo.id} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>)
+            return  (<TodoItem id={todo.id}completed={todo.completed} title={todo.title} key={todo.id} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>)
         
           })}
       
